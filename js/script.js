@@ -5,36 +5,80 @@
 (function () {
   "use strict";
 
-  /* ---------- Header: estado ao rolar ---------- */
+  /* ---------- Header: some ao rolar a página ---------- */
   var header = document.getElementById("header");
+  var HIDE_AFTER = 80;            // px rolados até a barra sumir
+  var SHOW_ON_SCROLL_UP = false;  // true = a barra volta quando a pessoa rola para cima
+  var lastY = window.scrollY;
+
   function onScrollHeader() {
-    header.classList.toggle("is-scrolled", window.scrollY > 40);
+    var y = window.scrollY;
+    header.classList.toggle("is-scrolled", y > 40);
+
+    if (!header.classList.contains("menu-open")) {
+      var hide = y > HIDE_AFTER;
+      if (hide && SHOW_ON_SCROLL_UP && y < lastY) hide = false;
+      header.classList.toggle("is-hidden", hide);
+    }
+    lastY = y;
   }
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   onScrollHeader();
 
-  /* ---------- Menu mobile ---------- */
+  // Quem navega pelo teclado sempre vê a barra
+  header.addEventListener("focusin", function () {
+    header.classList.remove("is-hidden");
+  });
+
+  /* ---------- Menu mobile (hambúrguer + X) ---------- */
   var toggle = document.getElementById("menuToggle");
+  var closeBtn = document.getElementById("navClose");
   var nav = document.getElementById("nav");
 
-  toggle.addEventListener("click", function () {
-    var open = nav.classList.toggle("is-open");
+  function setMenu(open) {
+    nav.classList.toggle("is-open", open);
     toggle.classList.toggle("is-open", open);
     header.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
     document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      header.classList.remove("is-hidden");
+      closeBtn.focus({ preventScroll: true });
+    }
+  }
+
+  toggle.addEventListener("click", function () {
+    setMenu(!nav.classList.contains("is-open"));
+  });
+
+  // Botão X fecha o menu e volta para a página
+  closeBtn.addEventListener("click", function () {
+    setMenu(false);
+    toggle.focus({ preventScroll: true });
   });
 
   // Fecha o menu ao clicar em um link
   nav.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      nav.classList.remove("is-open");
-      toggle.classList.remove("is-open");
-      header.classList.remove("menu-open");
-      toggle.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-    });
+    link.addEventListener("click", function () { setMenu(false); });
+  });
+
+  // Fecha ao tocar no fundo do menu (fora dos links)
+  nav.addEventListener("click", function (e) {
+    if (e.target === nav) setMenu(false);
+  });
+
+  // Fecha com a tecla Esc
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && nav.classList.contains("is-open")) {
+      setMenu(false);
+      toggle.focus({ preventScroll: true });
+    }
+  });
+
+  // Se a tela crescer (ex.: girar o celular), garante o menu fechado
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1100 && nav.classList.contains("is-open")) setMenu(false);
   });
 
   /* ---------- Scroll suave com compensação do header ---------- */

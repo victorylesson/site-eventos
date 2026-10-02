@@ -66,6 +66,10 @@
       </a>
 
       <nav class="nav" id="nav" aria-label="Navegação principal">
+        <!-- Botão X: aparece só no menu do celular e fecha o menu -->
+        <button type="button" class="nav__close" id="navClose" aria-label="Fechar menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
+        </button>
         <a href="#inicio" class="nav__link">Início</a>
         <a href="#o-manny" class="nav__link">O Manny</a>
         <a href="#agenda" class="nav__link">Agenda</a>
@@ -110,9 +114,12 @@
         </p>
         <div class="hero__actions reveal">
           <a href="#agenda" class="btn btn--primary">Ver a programação</a>
-          <a href="#orcamento" class="btn btn--ghost">Orçar evento</a>
+          <a href="#orcamento" class="btn btn--quote">
+            <svg viewBox="0 0 24 24" class="btn__icon btn__icon--stroke" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            Orçar evento
+          </a>
           <a href="#contato" data-wa="Olá! Gostaria de saber mais sobre reservas no Manny Deck."
-             class="btn btn--ghost" target="_blank" rel="noopener">
+             class="btn btn--whatsapp" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" class="btn__icon" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.2c.2-.3.5-.2.8-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z" fill="currentColor"/></svg>
             Chamar no WhatsApp
           </a>
@@ -224,12 +231,24 @@
           </article>
         </div>
 
-        <p class="agenda__cta reveal">
-          Quer a agenda completa e atualizada?
-          <a href="#contato" data-wa="Olá! Gostaria de saber mais sobre a programação do Manny Deck."
-             target="_blank" rel="noopener">Chame no WhatsApp</a>
-          ou siga <a href="https://www.instagram.com/mannydeckbar/" target="_blank" rel="noopener">@mannydeckbar</a>
-        </p>
+        <div class="agenda__cta reveal">
+          <div class="agenda__cta-text">
+            <p class="agenda__cta-hand">fique por dentro</p>
+            <h3 class="agenda__cta-title">Quer a agenda completa e atualizada?</h3>
+            <p class="agenda__cta-sub">Escolha o canal que preferir:</p>
+          </div>
+          <div class="agenda__cta-actions">
+            <a href="#contato" data-wa="Olá! Gostaria de saber mais sobre a programação do Manny Deck."
+               class="btn btn--whatsapp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" class="btn__icon" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.2c.2-.3.5-.2.8-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z" fill="currentColor"/></svg>
+              Chame no WhatsApp
+            </a>
+            <a href="https://www.instagram.com/mannydeckbar/" class="btn btn--primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" class="btn__icon btn__icon--stroke" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+              Siga @mannydeckbar
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -244,12 +263,27 @@
             que merece um cenário especial: o Manny Deck recebe o seu evento
             com estrutura de bar completa, deck e palco.
           </p>
-          <ul class="events__tags reveal">
-            <li>Aniversários</li>
-            <li>Confraternizações</li>
-            <li>Eventos corporativos</li>
-            <li>Comemorações</li>
-            <li>Festas particulares</li>
+          <ul class="events__types reveal">
+            <li>
+              <span class="events__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21h16M5 21v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7M12 12V8"/><circle cx="12" cy="5.2" r="1.2"/></svg></span>
+              <div><strong>Aniversários</strong><span class="events__desc">Do parabéns ao último brinde, com deck, drinks e música para a turma toda.</span></div>
+            </li>
+            <li>
+              <span class="events__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 14.3c.5-.2 1-.3 1.5-.3 2.2 0 4 1.8 4 4"/></svg></span>
+              <div><strong>Confraternizações</strong><span class="events__desc">Equipe, família ou amigos: uma noite para se reunir e celebrar junto.</span></div>
+            </li>
+            <li>
+              <span class="events__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+              <div><strong>Eventos corporativos</strong><span class="events__desc">Happy hour da empresa, encontros de equipe e lançamentos com estrutura de bar.</span></div>
+            </li>
+            <li>
+              <span class="events__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 7a3 3 0 0 1-6 0L8 3ZM12 13v7M8.5 20h7"/></svg></span>
+              <div><strong>Comemorações</strong><span class="events__desc">Conquistas, formaturas e datas especiais que merecem um brinde no deck.</span></div>
+            </li>
+            <li>
+              <span class="events__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z"/></svg></span>
+              <div><strong>Festas particulares</strong><span class="events__desc">Seu evento do seu jeito, com deck, palco e bar completo à disposição.</span></div>
+            </li>
           </ul>
         </div>
 
@@ -367,10 +401,19 @@
           <figure class="gallery__item reveal"><img src="assets/images/food.jpg" alt="Petiscos e gastronomia do bar" loading="lazy" /><figcaption>Gastronomia</figcaption></figure>
           <figure class="gallery__item reveal"><img src="assets/images/evento.jpg" alt="Evento particular no salão" loading="lazy" /><figcaption>Eventos</figcaption></figure>
         </div>
-        <p class="gallery__more reveal">
-          Muito mais no Instagram:
-          <a href="https://www.instagram.com/mannydeckbar/" target="_blank" rel="noopener">@mannydeckbar</a>
-        </p>
+        <div class="insta-wrap reveal">
+          <a href="https://www.instagram.com/mannydeckbar/" class="insta-banner" target="_blank" rel="noopener"
+             aria-label="Muito mais no Instagram: @mannydeckbar">
+            <span class="insta-banner__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="insta-banner__text">
+              <span class="insta-banner__lead">Muito mais no Instagram</span>
+              <strong class="insta-banner__handle">@mannydeckbar</strong>
+            </span>
+            <span class="insta-banner__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
 
