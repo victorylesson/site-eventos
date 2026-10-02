@@ -137,6 +137,37 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
+  /* ---------- WhatsApp: número único para todos os links ---------- */
+  var WHATSAPP_NUMBER = "558197550378"; // WhatsApp do Manny Deck Bar
+  function waLink(text) {
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+  }
+  document.querySelectorAll("[data-wa]").forEach(function (link) {
+    link.href = waLink(link.getAttribute("data-wa"));
+  });
+
+  /* ---------- Formulário de orçamento -> WhatsApp ---------- */
+  var quoteForm = document.getElementById("quoteForm");
+  if (quoteForm) {
+    var fields = quoteForm.elements;
+    var today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000);
+    fields["data"].min = today.toISOString().slice(0, 10);
+
+    quoteForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!quoteForm.reportValidity()) return;
+      var lines = [
+        "Olá! Gostaria de solicitar um orçamento para um evento no Manny Deck.",
+        "",
+        "Nome: " + fields["nome"].value.trim(),
+        "Tipo de evento: " + fields["tipo"].value
+      ];
+      if (fields["data"].value) lines.push("Data: " + fields["data"].value.split("-").reverse().join("/"));
+      if (fields["pessoas"].value) lines.push("Pessoas: " + fields["pessoas"].value);
+      window.open(waLink(lines.join("\n")), "_blank", "noopener");
+    });
+  }
+
   /* ---------- Ano dinâmico no footer ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
