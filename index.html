@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>Manny Deck Bar — Música ao vivo, drinks e eventos em Olinda</title>
+  <meta name="description" content="Manny Deck Bar: boemia contemporânea no Carmo, Olinda. Deck, coquetéis, música ao vivo, pocket shows, stand-up e espaço para o seu evento. R. do Sol, 468 — Olinda, PE." />
+  <meta name="keywords" content="Manny Deck Bar, bar em Olinda, bar em Carmo Olinda, eventos em Olinda, música ao vivo em Olinda, shows em Olinda, happy hour em Olinda, local para eventos em Olinda" />
+  <meta name="author" content="Manny Deck Bar" />
+  <meta name="theme-color" content="#121212" />
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Manny Deck Bar — Música ao vivo, drinks e eventos em Olinda" />
+  <meta property="og:description" content="Deck, coquetéis, pocket shows e stand-up no coração do Carmo, Olinda. Seu evento também acontece aqui." />
+  <meta property="og:image" content="assets/images/hero.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- ===== Favicon (substituir pelo arquivo oficial quando disponível) ===== -->
+  <link rel="icon" type="image/png" href="assets/logo/manny-logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo/manny-logo.png" />
+
+  <!-- ===== Fontes ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ===== Dados estruturados (negócio local) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Manny Deck Bar",
+    "description": "Boemia contemporânea e sofisticada com coquetéis, petiscos, deck e palco de pocket shows e comédia stand up.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. do Sol, 468 - Carmo",
+      "addressLocality": "Olinda",
+      "addressRegion": "PE",
+      "postalCode": "53120-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55-81-3318-0226",
+    "priceRange": "R$ 60–180",
+    "sameAs": ["https://www.instagram.com/mannydeckbar/"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#inicio" class="header__brand" aria-label="Manny Deck Bar — Início">
+        <img src="assets/logo/manny-logo.png" alt="Logo Manny Deck Bar" class="header__logo" />
+        <span class="header__name">Manny <em>Deck Bar</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#inicio" class="nav__link">Início</a>
+        <a href="#o-manny" class="nav__link">O Manny</a>
+        <a href="#agenda" class="nav__link">Agenda</a>
+        <a href="#cardapio" class="nav__link">Cardápio</a>
+        <a href="#eventos" class="nav__link">Eventos</a>
+        <a href="#galeria" class="nav__link">Galeria</a>
+        <a href="#localizacao" class="nav__link">Localização</a>
+        <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20reservas%20no%20Manny%20Deck."
+           class="btn btn--primary btn--sm nav__cta" target="_blank" rel="noopener">
+          Reservar
+        </a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" data-parallax>
+        <!-- Imagem demonstrativa — substituir por foto real do Manny Deck -->
+        <img src="assets/images/hero.jpg" alt="Deck do Manny Deck Bar à noite com luzes quentes, música ao vivo e público" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Carmo · Olinda · PE</p>
+        <h1 class="hero__title reveal">
+          Boemia, música,<br />sabores e <span class="hero__title-accent">experiências</span><br />em Olinda.
+        </h1>
+        <p class="hero__subtitle reveal">
+          Coquetéis autorais, deck ao ar livre, pocket shows e stand-up
+          no point mais vibrante do Carmo.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#agenda" class="btn btn--primary">Ver a programação</a>
+          <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20reservas%20no%20Manny%20Deck."
+             class="btn btn--ghost" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="btn__icon" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.2c.2-.3.5-.2.8-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z" fill="currentColor"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__foot">
+        <address class="hero__address">R. do Sol, 468 — Carmo, Olinda</address>
+        <a href="#o-manny" class="hero__scroll" aria-label="Rolar para a próxima seção">
+          <span class="hero__scroll-line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="about section section--dark" id="o-manny">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <!-- Imagem demonstrativa — substituir por foto real do deck -->
+          <img src="assets/images/deck.jpg" alt="Deck externo do Manny Deck Bar com mesas de madeira e luzes de cordão" loading="lazy" />
+          <div class="about__badge">
+            <strong>4,5 ★</strong>
+            <span>+1.500 avaliações<br />no Google</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="section__eyebrow reveal">O Manny</p>
+          <h2 class="section__title reveal">Boemia contemporânea<br />com <span class="hand">alma de deck</span></h2>
+          <p class="about__text reveal">
+            Boemia contemporânea e sofisticada com coquetéis, petiscos,
+            deck e palco de pocket shows e comédia stand-up. Um ambiente
+            descontraído feito para quem quer viver a noite de Olinda
+            com boa música, bons drinks e boa companhia.
+          </p>
+
+          <ul class="about__features">
+            <li class="reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18v-2H3v2Zm1-4h16l-1.5-9h-3L17 3h-2l-1.5 5h-3L9 3H7l1.5 5h-3L4 17Z" fill="currentColor"/></svg>
+              <div><strong>Deck ao ar livre</strong><span>Clima de varanda, céu aberto e brisa do Carmo.</span></div>
+            </li>
+            <li class="reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2 5.5 13H9l-2 9L15.5 11H11l2-9h-2Z" fill="currentColor"/></svg>
+              <div><strong>Coquetelaria</strong><span>Drinks clássicos e autorais para brindar a noite.</span></div>
+            </li>
+            <li class="reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.6A4 4 0 1 0 14 17V7h4V3h-6Z" fill="currentColor"/></svg>
+              <div><strong>Música ao vivo</strong><span>Pocket shows e vozes da cena local no palco.</span></div>
+            </li>
+            <li class="reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3Zm7 9a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V22h2v-2.06A9 9 0 0 0 21 11h-2Z" fill="currentColor"/></svg>
+              <div><strong>Stand-up comedy</strong><span>Risada garantida em noites de comédia.</span></div>
+            </li>
+            <li class="reveal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.1 13.3 2.4 7.6a1 1 0 0 1 1.4-1.4l5.7 5.7 1.4-1.4L5.2 4.8a1 1 0 1 1 1.4-1.4l5.7 5.7 1.4-1.4L8 1.9A1 1 0 0 1 9.4.5l8.5 8.5a5 5 0 0 1 0 7.1l-2.5 2.5a5 5 0 0 1-7.3-5.3Z" fill="currentColor"/></svg>
+              <div><strong>Gastronomia</strong><span>Petiscos e pratos para dividir — ou não.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGENDA ================= -->
+    <section class="agenda section section--cream" id="agenda">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow section__eyebrow--dark reveal">O que rola</p>
+          <h2 class="section__title section__title--dark reveal">Agenda da semana</h2>
+          <p class="section__note reveal">Programação ilustrativa para demonstração — a agenda real será atualizada pela equipe do Manny.</p>
+        </div>
+
+        <!--
+          ⚠ DADOS DE DEMONSTRAÇÃO
+          Os eventos abaixo são fictícios. Substituir pela agenda real.
+          Estrutura preparada para integração futura com banco de dados.
+        -->
+        <div class="agenda__list" id="agendaList">
+          <article class="event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">SEX</span><span class="event-card__tag">Exemplo</span></div>
+            <div class="event-card__body">
+              <h3 class="event-card__title">Noite de Pocket Show</h3>
+              <p class="event-card__time">Atração e horário a definir</p>
+              <p class="event-card__desc">Voz e violão no palco do deck para abrir o fim de semana com a cena local.</p>
+            </div>
+            <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20programa%C3%A7%C3%A3o%20do%20Manny%20Deck."
+               class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="event-card event-card--highlight reveal">
+            <div class="event-card__date"><span class="event-card__day">SÁB</span><span class="event-card__tag">Exemplo</span></div>
+            <div class="event-card__body">
+              <h3 class="event-card__title">Música ao Vivo + DJ</h3>
+              <p class="event-card__time">Atração e horário a definir</p>
+              <p class="event-card__desc">Show no palco principal e pista aberta até tarde com o melhor da noite.</p>
+            </div>
+            <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20programa%C3%A7%C3%A3o%20do%20Manny%20Deck."
+               class="btn btn--primary btn--sm" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-card__date"><span class="event-card__day">DOM</span><span class="event-card__tag">Exemplo</span></div>
+            <div class="event-card__body">
+              <h3 class="event-card__title">Sunset no Deck</h3>
+              <p class="event-card__time">Atração e horário a definir</p>
+              <p class="event-card__desc">Fim de tarde com drinks, petiscos e som ambiente para fechar a semana.</p>
+            </div>
+            <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20programa%C3%A7%C3%A3o%20do%20Manny%20Deck."
+               class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener">Reservar</a>
+          </article>
+        </div>
+
+        <p class="agenda__cta reveal">
+          Quer a agenda completa e atualizada?
+          <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20programa%C3%A7%C3%A3o%20do%20Manny%20Deck."
+             target="_blank" rel="noopener">Chame no WhatsApp</a>
+          ou siga <a href="https://www.instagram.com/mannydeckbar/" target="_blank" rel="noopener">@mannydeckbar</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CARDÁPIO ================= -->
+    <section class="menu section section--dark" id="cardapio">
+      <div class="container">
+        <div class="menu__grid">
+          <div class="menu__intro">
+            <p class="section__eyebrow reveal">Sabores</p>
+            <h2 class="section__title reveal">Drinks, petiscos<br />e <span class="hand">boa mesa</span></h2>
+            <p class="menu__text reveal">
+              Da coquetelaria aos petiscos para dividir, o cardápio do Manny
+              foi pensado para acompanhar a música e a conversa boa.
+            </p>
+            <!-- Imagens demonstrativas — substituir por fotos reais -->
+            <div class="menu__photos reveal">
+              <img src="assets/images/drinks.jpg" alt="Coquetéis artesanais no balcão do bar" loading="lazy" />
+              <img src="assets/images/food.jpg" alt="Petiscos servidos em mesa de bar" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="menu__panel reveal">
+            <!--
+              ⚠ DADOS DE DEMONSTRAÇÃO
+              Itens e descrições abaixo são ilustrativos. Não representam
+              o cardápio real nem preços do estabelecimento.
+              Estrutura preparada para integração com gerenciador de cardápio.
+            -->
+            <div class="menu__tabs" role="tablist" aria-label="Categorias do cardápio">
+              <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="coqueteis">Coquetéis</button>
+              <button class="menu__tab" role="tab" aria-selected="false" data-tab="petiscos">Petiscos</button>
+              <button class="menu__tab" role="tab" aria-selected="false" data-tab="pratos">Pratos</button>
+              <button class="menu__tab" role="tab" aria-selected="false" data-tab="bebidas">Bebidas</button>
+            </div>
+
+            <div class="menu__items is-active" id="tab-coqueteis" role="tabpanel">
+              <div class="menu__item"><div><strong>Drink autoral da casa</strong><span>Combinação exclusiva do bar — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Clássico tropical</strong><span>Frutas da estação e destilado premium — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Caipirinha especial</strong><span>Releitura da clássica brasileira — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Sem álcool</strong><span>Opções refrescantes para todos — item de exemplo</span></div></div>
+            </div>
+
+            <div class="menu__items" id="tab-petiscos" role="tabpanel" hidden>
+              <div class="menu__item"><div><strong>Petisco da casa</strong><span>Para dividir com a mesa — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Porção crocante</strong><span>Acompanha molho especial — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Seleção do chef</strong><span>Sugestão do dia — item de exemplo</span></div></div>
+            </div>
+
+            <div class="menu__items" id="tab-pratos" role="tabpanel" hidden>
+              <div class="menu__item"><div><strong>Prato principal</strong><span>Consulte as opções do dia — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Especial da semana</strong><span>Criação sazonal da cozinha — item de exemplo</span></div></div>
+            </div>
+
+            <div class="menu__items" id="tab-bebidas" role="tabpanel" hidden>
+              <div class="menu__item"><div><strong>Cervejas</strong><span>Geladas, nacionais e artesanais — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Destilados e doses</strong><span>Seleção do bar — item de exemplo</span></div></div>
+              <div class="menu__item"><div><strong>Refrigerantes e águas</strong><span>Opções sem álcool — item de exemplo</span></div></div>
+            </div>
+
+            <p class="menu__disclaimer">Itens ilustrativos para demonstração.</p>
+            <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20ver%20o%20card%C3%A1pio%20completo%20do%20Manny%20Deck."
+               class="btn btn--primary" target="_blank" rel="noopener">Ver cardápio completo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENTOS PARTICULARES ================= -->
+    <section class="events section" id="eventos">
+      <div class="container events__grid">
+        <div class="events__content">
+          <p class="section__eyebrow section__eyebrow--light reveal">Eventos particulares</p>
+          <h2 class="section__title reveal">Seu evento<br />acontece aqui</h2>
+          <p class="events__text reveal">
+            Aniversário, confraternização da empresa ou aquela comemoração
+            que merece um cenário especial: o Manny Deck recebe o seu evento
+            com estrutura de bar completa, deck e palco.
+          </p>
+          <ul class="events__tags reveal">
+            <li>Aniversários</li>
+            <li>Confraternizações</li>
+            <li>Eventos corporativos</li>
+            <li>Comemorações</li>
+            <li>Festas particulares</li>
+          </ul>
+          <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20realizar%20um%20evento%20no%20Manny%20Deck."
+             class="btn btn--dark reveal" target="_blank" rel="noopener">Solicitar orçamento</a>
+        </div>
+        <div class="events__media reveal">
+          <!-- Imagem demonstrativa — substituir por foto real de evento -->
+          <img src="assets/images/evento.jpg" alt="Comemoração em evento particular no Manny Deck Bar" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="gallery section section--dark" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow reveal">Atmosfera</p>
+          <h2 class="section__title reveal">A vibe do Manny</h2>
+        </div>
+        <!-- Imagens demonstrativas — substituir pelas fotos reais do Instagram/acervo -->
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item--tall reveal"><img src="assets/images/show.jpg" alt="Pocket show no palco do Manny Deck Bar" loading="lazy" /><figcaption>Shows</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/images/drinks.jpg" alt="Coquetéis coloridos no bar" loading="lazy" /><figcaption>Drinks</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/images/deck.jpg" alt="Área do deck ao ar livre" loading="lazy" /><figcaption>Deck</figcaption></figure>
+          <figure class="gallery__item gallery__item--wide reveal"><img src="assets/images/crowd.jpg" alt="Público curtindo a noite no Manny Deck" loading="lazy" /><figcaption>A noite</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/images/food.jpg" alt="Petiscos e gastronomia do bar" loading="lazy" /><figcaption>Gastronomia</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/images/evento.jpg" alt="Evento particular no salão" loading="lazy" /><figcaption>Eventos</figcaption></figure>
+        </div>
+        <p class="gallery__more reveal">
+          Muito mais no Instagram:
+          <a href="https://www.instagram.com/mannydeckbar/" target="_blank" rel="noopener">@mannydeckbar</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= LOCALIZAÇÃO ================= -->
+    <section class="location section section--cream" id="localizacao">
+      <div class="container location__grid">
+        <div class="location__info">
+          <p class="section__eyebrow section__eyebrow--dark reveal">Onde fica</p>
+          <h2 class="section__title section__title--dark reveal">No coração<br />do Carmo</h2>
+          <address class="location__address reveal">
+            <strong>Manny Deck Bar</strong><br />
+            R. do Sol, 468 — Carmo<br />
+            Olinda — PE · CEP 53120-000<br /><br />
+            <a href="tel:+558133180226" class="location__phone">(81) 3318-0226</a>
+          </address>
+          <div class="location__actions reveal">
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+do+Sol,+468+-+Carmo,+Olinda+-+PE"
+               class="btn btn--outline-dark" target="_blank" rel="noopener">Como chegar</a>
+            <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20reservas%20no%20Manny%20Deck."
+               class="btn btn--primary" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
+        </div>
+        <div class="location__map reveal">
+          <iframe
+            title="Mapa — Manny Deck Bar, R. do Sol, 468, Carmo, Olinda"
+            src="https://www.google.com/maps?q=R.+do+Sol,+468+-+Carmo,+Olinda+-+PE,+53120-000&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO / CTA FINAL ================= -->
+    <section class="cta section section--dark" id="contato">
+      <div class="container cta__inner">
+        <p class="cta__hand reveal">bora?</p>
+        <h2 class="cta__title reveal">Vamos viver essa experiência?</h2>
+        <p class="cta__text reveal">Chame a gente e saiba mais sobre reservas, eventos e programação.</p>
+        <div class="cta__actions reveal">
+          <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20reservas%20no%20Manny%20Deck."
+             class="btn btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/mannydeckbar/" class="btn btn--ghost" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=R.+do+Sol,+468+-+Carmo,+Olinda+-+PE"
+             class="btn btn--ghost" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo/manny-logo.png" alt="Logo Manny Deck Bar" class="footer__logo" />
+        <p>Boemia contemporânea com deck, drinks, música ao vivo e stand-up no Carmo, Olinda.</p>
+      </div>
+      <nav class="footer__links" aria-label="Links rápidos">
+        <strong>Navegue</strong>
+        <a href="#inicio">Início</a>
+        <a href="#o-manny">O Manny</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Localização</a>
+      </nav>
+      <div class="footer__contact">
+        <strong>Contato</strong>
+        <address>
+          R. do Sol, 468 — Carmo<br />
+          Olinda — PE · 53120-000<br />
+          <a href="tel:+558133180226">(81) 3318-0226</a><br />
+          <a href="https://www.instagram.com/mannydeckbar/" target="_blank" rel="noopener">@mannydeckbar</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Manny Deck Bar. Todos os direitos reservados.</p>
+      <p class="footer__demo">Protótipo demonstrativo — conteúdo e imagens ilustrativos.</p>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLUTUANTE ================= -->
+  <a href="https://wa.me/558133180226?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Manny%20Deck."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.2c.2-.3.5-.2.8-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z" fill="currentColor"/></svg>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
