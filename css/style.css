@@ -369,6 +369,7 @@ address { font-style: normal; }
   margin-bottom: 2.2rem;
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+.hero__actions .btn { min-width: 15rem; } /* dois botões com a mesma largura */
 
 .hero__foot {
   position: absolute;
