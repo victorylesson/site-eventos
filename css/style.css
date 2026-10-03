@@ -132,6 +132,7 @@ address { font-style: normal; }
 
 .btn--primary {
   background: var(--gradient-brand);
+  background-origin: border-box; /* depois do shorthand: o degradê cobre também a borda transparente */
   color: var(--ink);
   box-shadow: 0 10px 30px rgba(249, 112, 40, 0.35);
 }
